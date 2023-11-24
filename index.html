@@ -4,50 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NovoProjeto</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-        <header class="cabecalho">
-          <H1>Nutella</H1>
-          <img src="./img/Nutella_Logo_Design_History_Evolution_0.png" alt="imagem_nutella">
-          <nav class="cabecalho-menu">
-            <a href="#sobre">Sobre a Nutella</a>
-            <a href="#produto">Produtos</a>
-            <a href="#contato">Contato</a>
-          </nav>
-        </header>
-      
-        <main class="conteudo">
-            <div>
-            <h1 class="sobre">Sobre a Nutella</h1>
-                <p>Positividade como ingrediente principal Após a Segunda Guerra Mundial, o cacau era extremamente escasso. A Ferrero, originária de Piemonte, na Itália, transformou esse problema complicado em uma solução inteligente, criando uma pasta doce feita de avelãs, açúcar e apenas um pouco do cacau raro. O ancestral de Nutella® nasceu.<p>
-            </div>
+    <!-- No primeiro dia criei toda a estrutura do HTML, seguindo um padrão de HEADER - MAIN (separando cada parte em sections para a facilitação da leitura, as vezes coloco nome as classes sem mesmo usa-las, somente para melhor entendimento mesmo.) - FOOTER.
 
+        Segundo dia criei o restante, fiz um CSS bem basico com varios modelos passados durante as aulas (Menos esse estilo de HOVER, achei muito bacaninha e resolvi implementar no meu codigo. Descobri que sou viciado em achar HOOVERS legais kkk).
 
-            <h1 class="produto">Produtos</h1>
-            <div class="conteudo-principal-img">
-                <img src="./img/Nutella_Logo_Design_History_Evolution_0.png" alt="Nutelinhaaaaa" width="320" height="320" />
-                <p class="preco"><b>R$49,99</b></p>
-                <button class="comprar" type="submit">COMPRAR</button>
-            </div>
-      
-            <h1 class="produto">Produtos</h1>
-            <div class="conteudo-principal-img">
-                <img src="./img/02_b-ready.png" alt="Nutelaaaaa" width="320" height="320" />
-                <p class="preco"><b>R$24,90</b></p>
-                <button class="comprar" type="submit">COMPRAR</button>
-            </div>
-          </section>
+        Ainda no segundo dia, fiz a implementação de um codigo também passado em aula aplicado na parte do contato! Levando o usuario a um MODAL para que ele insirisse o contato dele
+        lá, ao meu ver uma forma interressante de atribuição ao MODAL.
+    
+        Basicamente isso! Um layout simples e eficaz, com uma ideia baseada em algo que eu estava comendo ao decorrer do desenvolvimento do projeto! A famigerada Nutella!
+        
+        Ah, e já estava me esquecendo. Dei uma trabalhada também nos botões de abrir o modal, os inputs dentro da barra de contato, o enviar e também o botão de fechar o modal. Deixando todos o botões padronizados da meneira que achei mais bacana.
+    -->
+  <header class="cabecalho">
+      <H1>Nutella</H1>
+      <img src="./img/Nutella_Logo_Design_History_Evolution_0.png" alt="imagem_nutella">
+      <nav class="cabecalho-menu">
+          <a href="#sobre">Sobre a Nutella</a>
+          <a href="#produto">Produtos</a>
+          <a href="#contato">Contato</a>
+      </nav>
+  </header>
 
-            <h1 class="contato">Contatos</h1>
-            <div>
-                <img src="./img/Nutella_Logo_Design_History_Evolution_0.png" alt="Nutelaaaaa" width="320" height="320" />
-                <button class="comprar" type="submit">COMPRAR</button>               
-            </div>
-        </main>
-      
-        <footer class="FinalDaPag">
-          <p><sup>&reg;</sup>2023 - Todos os direitos reservados</p>
-        </footer>
+  <main id="sobre">
+    <section>
+      <div>
+          <h1 class="sobre">Sobre a Nutella</h1>
+          <p>Positividade como ingrediente principal Após a Segunda Guerra Mundial, o cacau era extremamente escasso. A Ferrero, originária de Piemonte, na Itália, transformou esse problema complicado em uma solução inteligente, criando uma pasta doce feita de avelãs, açúcar e apenas um pouco do cacau raro. O ancestral de Nutella® nasceu.</p>
+      </div>
+
+      <h1 class="produto">Pote Nutella</h1>
+      <div class="conteudo-principal-img">
+          <img src="./img/Nutella_Logo_Design_History_Evolution_0.png" alt="Nutelinhaaaaa" width="320" height="320" />
+          <p class="preco"><b>R$49,99</b></p>
+          <button class="grow" type="submit">COMPRAR</button>
+      </div>
+
+      <h1 id="produto">B-ready</h1>
+      <div class="conteudo-principal-img">
+          <img src="./img/02_b-ready.png" alt="Nutelaaaaa" width="320" height="320" />
+          <p class="preco"><b>R$24,90</b></p>
+          <button class="grow" type="submit">COMPRAR</button>
+      </div>
+    </section>
+
+        <section id="contato">
+            <h1>Contato</h1>
+            <a href="#" class="abrirModal" id="abrirModal">Clique aqui para insirir seus dados de contato</a>
+            <dialog>
+                <h2>Insira seus dados</h2>
+                <form id="form">
+                    <label for="nome"><p>Nome:</p></label>
+                    <input type="text" name="nome" id="nome"><br>
+                    <label for="email"><p>Email:</p></label>
+                    <input type="text" name="email" id="email"><br>
+                    <button class="botao-modal" type="button" onclick="salvar()">ENVIAR</button>
+                </form>
+                <a href="#" class="fecharModal" id="fecharModal">Fechar modal</a>
+            </dialog>
+        </section>
+  </main>
+
+  <footer class="FinalDaPag">
+      <p><sup>&reg;</sup>2023 - Todos os direitos reservados</p>
+  </footer>
     
 </body>
+    <script src="script.js"></script>
 </html>
